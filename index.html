@@ -186,6 +186,10 @@
     .service-item { transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
     .service-item:hover { background-color: rgba(26, 24, 22, 0.015); }
 
+    /* Spinner */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { display: inline-block; width: 18px; height: 18px; border: 2.5px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; }
+
     /* Force line-height on headings (overrides Tailwind text-* built-in line-height) */
     .lh-heading { line-height: 1.12 !important; }
     .lh-display { line-height: 1.02 !important; }
@@ -727,7 +731,11 @@
       const btn = e.target.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
 
-      btn.textContent = 'Sending...';
+      btn.textContent = '';
+      const spinner = document.createElement('span');
+      spinner.className = 'spinner';
+      btn.appendChild(spinner);
+      btn.appendChild(document.createTextNode(' Sending...'));
       btn.classList.add('opacity-60', 'pointer-events-none');
 
       const payload = {

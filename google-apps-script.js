@@ -15,7 +15,7 @@
 //
 // ═══════════════════════════════════════════════════════
 
-const NOTIFICATION_EMAIL = "hello@crealwork.com";
+const NOTIFICATION_EMAIL = "dan@crealwork.com";
 const SHEET_NAME = "Sheet1"; // ← 시트 탭 이름
 
 function doPost(e) {

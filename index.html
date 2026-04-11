@@ -297,36 +297,75 @@
         </a>
       </div>
 
-      <!-- Hero visual: CREAL symbol + floating accents -->
+      <!-- Hero visual: CREAL symbol + orbital system -->
       <div class="hidden lg:flex items-center justify-center relative">
-        <div class="absolute w-[380px] h-[380px] rounded-full glow-breathe" style="background: radial-gradient(circle, rgba(255,204,78,0.18) 0%, transparent 65%); filter: blur(40px);"></div>
+        <div class="absolute w-[300px] h-[300px] rounded-full glow-breathe" style="background: radial-gradient(circle, rgba(255,204,78,0.15) 0%, transparent 65%); filter: blur(40px);"></div>
 
-        <!-- Floating accent particles -->
-        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 500 500" fill="none">
-          <circle cx="75" cy="110" r="3" fill="#FFCC4E" opacity="0.25">
-            <animate attributeName="cy" values="110;95;110" dur="7s" repeatCount="indefinite"/>
+        <!-- Orbital system around symbol -->
+        <svg class="absolute" viewBox="0 0 500 500" fill="none" style="width: 480px; height: 480px;">
+          <!-- Orbit rings -->
+          <circle cx="250" cy="250" r="160" stroke="#1A1816" stroke-width="0.8" opacity="0.05" stroke-dasharray="3 8"/>
+          <circle cx="250" cy="250" r="210" stroke="#1A1816" stroke-width="0.8" opacity="0.04" stroke-dasharray="2 10"/>
+
+          <!-- Rotating arc segments -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="360 250 250" dur="30s" repeatCount="indefinite"/>
+            <circle cx="250" cy="250" r="160" stroke="#FFCC4E" stroke-width="1.5" opacity="0.15" stroke-dasharray="40 460" stroke-linecap="round"/>
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="-360 250 250" dur="45s" repeatCount="indefinite"/>
+            <circle cx="250" cy="250" r="210" stroke="#FFCC4E" stroke-width="1" opacity="0.1" stroke-dasharray="60 1260" stroke-linecap="round"/>
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="180 250 250" to="540 250 250" dur="30s" repeatCount="indefinite"/>
+            <circle cx="250" cy="250" r="160" stroke="#1A1816" stroke-width="1" opacity="0.06" stroke-dasharray="25 480" stroke-linecap="round"/>
+          </g>
+
+          <!-- Orbiting dots (inner ring) -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="360 250 250" dur="18s" repeatCount="indefinite"/>
+            <circle cx="410" cy="250" r="3.5" fill="#FFCC4E" opacity="0.4"/>
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="120 250 250" to="480 250 250" dur="18s" repeatCount="indefinite"/>
+            <circle cx="410" cy="250" r="2" fill="#1A1816" opacity="0.1"/>
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="240 250 250" to="600 250 250" dur="18s" repeatCount="indefinite"/>
+            <circle cx="410" cy="250" r="2.5" fill="#1A1816" opacity="0.08"/>
+          </g>
+
+          <!-- Orbiting dots (outer ring, reverse) -->
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="-360 250 250" dur="28s" repeatCount="indefinite"/>
+            <circle cx="460" cy="250" r="3" fill="#1A1816" opacity="0.1"/>
+          </g>
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="180 250 250" to="-180 250 250" dur="28s" repeatCount="indefinite"/>
+            <circle cx="460" cy="250" r="2.5" fill="#FFCC4E" opacity="0.2"/>
+          </g>
+
+          <!-- Pulse ring from center -->
+          <circle cx="250" cy="250" fill="none" stroke="#FFCC4E" stroke-width="0.8">
+            <animate attributeName="r" from="80" to="220" dur="5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.1" to="0" dur="5s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="430" cy="370" r="2.5" fill="#1A1816" opacity="0.08">
-            <animate attributeName="cy" values="370;385;370" dur="9s" repeatCount="indefinite"/>
+
+          <!-- Floating accent dots -->
+          <circle cx="95" cy="130" r="2" fill="#FFCC4E" opacity="0.2">
+            <animate attributeName="cy" values="130;118;130" dur="7s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="390" cy="80" r="2" fill="#FFCC4E" opacity="0.2">
-            <animate attributeName="cy" values="80;68;80" dur="6s" repeatCount="indefinite"/>
+          <circle cx="420" cy="390" r="1.5" fill="#1A1816" opacity="0.06">
+            <animate attributeName="cy" values="390;402;390" dur="9s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="55" cy="340" r="2" fill="#1A1816" opacity="0.06">
-            <animate attributeName="cy" values="340;355;340" dur="8s" repeatCount="indefinite"/>
+          <circle cx="380" cy="80" r="1.5" fill="#FFCC4E" opacity="0.15">
+            <animate attributeName="cy" values="80;70;80" dur="6s" repeatCount="indefinite"/>
           </circle>
-          <line x1="55" y1="220" x2="75" y2="215" stroke="#1A1816" stroke-width="1.5" stroke-linecap="round" opacity="0.07">
-            <animate attributeName="y1" values="220;208;220" dur="8s" repeatCount="indefinite"/>
-            <animate attributeName="y2" values="215;203;215" dur="8s" repeatCount="indefinite"/>
-          </line>
-          <line x1="435" y1="200" x2="450" y2="205" stroke="#FFCC4E" stroke-width="1.5" stroke-linecap="round" opacity="0.15">
-            <animate attributeName="y1" values="200;212;200" dur="10s" repeatCount="indefinite"/>
-            <animate attributeName="y2" values="205;217;205" dur="10s" repeatCount="indefinite"/>
-          </line>
         </svg>
 
+        <!-- Symbol (smaller) -->
         <div class="animate-float relative">
-          <svg viewBox="0 0 500 500" class="w-[340px] h-[340px] xl:w-[400px] xl:h-[400px] drop-shadow-[0_20px_60px_rgba(255,204,78,0.12)]">
+          <svg viewBox="0 0 500 500" class="w-[220px] h-[220px] xl:w-[260px] xl:h-[260px] drop-shadow-[0_16px_48px_rgba(255,204,78,0.1)]">
             <path fill="#FFCC4E" d="M250,0C111.93,0,0,111.93,0,250s111.93,250,250,250,250-111.93,250-250S388.07,0,250,0ZM395.72,353.05c-34.62,84.02-151.29,97.56-226.55,55.31C17.63,323.3,54.6,70.69,248.84,68.4c48.2-.57,117.67,18.42,144.71,58.93,24.08,36.08,10.77,81.42-40.97,75.13-59.72-7.26-70.48-133.82-148.13-90.94-97.29,53.72,9.47,322.8,145.13,218.06,8.81-6.8,29.91-34.33,34.18-35.95,36.13-13.69,17.49,45.97,11.95,59.43Z"/>
           </svg>
         </div>

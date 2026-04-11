@@ -718,16 +718,41 @@
       }
     }, { passive: true });
 
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
+    // ── Google Sheets 연동 ──
+    // Apps Script 배포 후 아래 URL 교체
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwEMyRS2MinT0Y3Oqp0iUNn7unaiA1vtFQnqAc4I3n2belj3ZqSgeUkbqSlswEDqtox9g/exec';
+
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = e.target.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
-      btn.textContent = 'Sent!';
+
+      btn.textContent = 'Sending...';
       btn.classList.add('opacity-60', 'pointer-events-none');
+
+      const payload = {
+        name: e.target.name.value,
+        company: e.target.company.value,
+        email: e.target.email.value,
+        message: e.target.message.value,
+      };
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        btn.textContent = 'Sent!';
+        e.target.reset();
+      } catch {
+        btn.textContent = 'Error. Try again.';
+      }
+
       setTimeout(() => {
         btn.textContent = originalText;
         btn.classList.remove('opacity-60', 'pointer-events-none');
-        e.target.reset();
       }, 2500);
     });
   </script>

@@ -738,11 +738,13 @@
       };
 
       try {
+        const formData = new FormData();
+        formData.append('payload', JSON.stringify(payload));
+
         await fetch(APPS_SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          body: formData,
         });
         btn.textContent = 'Sent!';
         e.target.reset();

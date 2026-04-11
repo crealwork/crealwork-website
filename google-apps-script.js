@@ -20,7 +20,12 @@ const SHEET_NAME = "Sheet1"; // ← 시트 탭 이름
 
 function doPost(e) {
   try {
-    const data = JSON.parse(e.postData.contents);
+    let data;
+    if (e.parameter && e.parameter.payload) {
+      data = JSON.parse(e.parameter.payload);
+    } else {
+      data = JSON.parse(e.postData.contents);
+    }
 
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     let sheet = ss.getSheetByName(SHEET_NAME);

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREAL | AI Marketing Consulting for Businesses Ready to Move</title>
+  <meta name="description" content="CREAL is an AI marketing consulting firm that helps businesses integrate AI into their marketing workflows. From automation and content generation to GTM strategy for startups and legacy businesses.">
+  <meta name="keywords" content="AI marketing consulting, AI marketing agency, marketing automation, AI content generation, go-to-market strategy, AI for business, marketing AI integration">
+  <link rel="canonical" href="https://crealwork.com">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CREAL Marketing Inc.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crealwork.com">
+  <meta property="og:title" content="CREAL | AI Marketing Consulting">
+  <meta property="og:description" content="We help businesses integrate AI into their marketing. Strategy, automation, content generation, and go-to-market consulting.">
+  <meta property="og:site_name" content="CREAL">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CREAL | AI Marketing Consulting">
+  <meta name="twitter:description" content="We help businesses integrate AI into their marketing. Strategy, automation, content generation, and go-to-market consulting.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFCC4E' d='M250,0C111.93,0,0,111.93,0,250s111.93,250,250,250,250-111.93,250-250S388.07,0,250,0ZM395.72,353.05c-34.62,84.02-151.29,97.56-226.55,55.31C17.63,323.3,54.6,70.69,248.84,68.4c48.2-.57,117.67,18.42,144.71,58.93,24.08,36.08,10.77,81.42-40.97,75.13-59.72-7.26-70.48-133.82-148.13-90.94-97.29,53.72,9.47,322.8,145.13,218.06,8.81-6.8,29.91-34.33,34.18-35.95,36.13-13.69,17.49,45.97,11.95,59.43Z'/%3E%3C/svg%3E">
+
+  <!-- Schema.org: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CREAL",
+    "legalName": "CREAL Marketing Inc.",
+    "url": "https://crealwork.com",
+    "email": "hello@crealwork.com",
+    "description": "CREAL is an AI marketing consulting firm that helps businesses integrate AI into their marketing workflows, from automation to go-to-market strategy.",
+    "knowsAbout": ["AI Marketing", "Marketing Automation", "Content Generation", "Go-to-Market Strategy", "AI Integration", "Predictive Analytics"],
+    "serviceType": ["AI Marketing Consulting", "Marketing Automation", "GTM Strategy", "AI Integration for Legacy Businesses"],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Global"
+    }
+  }
+  </script>
+
+  <!-- Schema.org: FAQPage (AEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does CREAL do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CREAL is an AI marketing consulting firm. We help businesses adopt AI into their marketing by learning their existing workflows first, then finding where AI fits naturally into what they're already doing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does AI change marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI is reshaping every part of marketing. It is already writing copy, generating creative assets, automating repetitive tasks, and enabling predictive analytics. CREAL helps businesses put these capabilities to work before their competitors do."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can legacy businesses benefit from AI marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You don't need to be a tech company to benefit from AI. CREAL helps traditional businesses find real, practical ways to use AI in their day-to-day marketing operations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does CREAL help startups with go-to-market strategy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. CREAL helps early-stage SaaS teams build go-to-market plans that get them from pre-seed to seed. No fluff, just what works to get traction."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            creal: {
+              yellow: '#FFCC4E',
+              'yellow-hover': '#E5B63A',
+              paper: '#F5F0E8',
+              'paper-alt': '#ECE7DE',
+              ink: '#1A1816',
+              'ink-mid': '#6E6660',
+              'ink-light': '#A39D96',
+              charcoal: '#1A1816',
+              navy: '#1A2A4F',
+            }
+          },
+          fontFamily: {
+            sans: ['Satoshi', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { font-family: 'Satoshi', system-ui, sans-serif; }
+
+    ::selection { background-color: #FFCC4E; color: #1A1816; }
+    :focus-visible { outline: 2px solid #FFCC4E; outline-offset: 2px; }
+
+    /* Paper grain */
+    body::after {
+      content: ''; position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: 0.055;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: 49; pointer-events: none;
+      background: radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(26,24,22,0.04) 100%);
+    }
+
+    /* ═══ Base Animations ═══ */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-18px) rotate(1.5deg); }
+    }
+    .animate-float { animation: float 7s ease-in-out infinite; }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .pulse-dot { animation: pulse-dot 2.5s ease-in-out infinite; }
+
+    @keyframes glow-breathe {
+      0%, 100% { opacity: 0.12; }
+      50% { opacity: 0.2; }
+    }
+    .glow-breathe { animation: glow-breathe 5s ease-in-out infinite; }
+
+    /* Scroll reveal */
+    [data-reveal] {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-reveal].revealed { opacity: 1; transform: translateY(0); }
+    [data-delay="1"] { transition-delay: 0.12s; }
+    [data-delay="2"] { transition-delay: 0.24s; }
+    [data-delay="3"] { transition-delay: 0.36s; }
+
+    .bar-extend { width: 0; transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s; }
+    .bar-extend.revealed { width: 3rem; }
+
+    /* Buttons */
+    .btn-creal { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .btn-creal:hover { transform: translateY(-2px); box-shadow: 0 8px 30px -8px rgba(255, 204, 78, 0.4); }
+    .btn-creal:active { transform: translateY(0) scale(0.98); }
+
+    /* Form inputs */
+    .input-paper {
+      transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .input-paper:focus { border-color: #FFCC4E; box-shadow: 0 0 0 3px rgba(255, 204, 78, 0.18); }
+
+    /* Nav */
+    .nav-scrolled {
+      background-color: rgba(245, 240, 232, 0.92) !important;
+      box-shadow: 0 1px 0 rgba(26, 24, 22, 0.06);
+    }
+
+    /* Service hover */
+    .service-item { transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .service-item:hover { background-color: rgba(26, 24, 22, 0.015); }
+
+    /* Force line-height on headings (overrides Tailwind text-* built-in line-height) */
+    .lh-heading { line-height: 1.12 !important; }
+    .lh-display { line-height: 1.02 !important; }
+
+    /* ═══ Growth Chart Animation (03) ═══ */
+    @keyframes draw-growth {
+      0%   { stroke-dashoffset: 620; opacity: 0; }
+      5%   { opacity: 1; }
+      40%  { stroke-dashoffset: 0; opacity: 1; }
+      70%  { stroke-dashoffset: 0; opacity: 1; }
+      85%  { stroke-dashoffset: 0; opacity: 0; }
+      86%  { stroke-dashoffset: 620; }
+      100% { stroke-dashoffset: 620; opacity: 0; }
+    }
+    .growth-line { stroke-dasharray: 620; animation: draw-growth 9s ease-in-out infinite; }
+
+    @keyframes growth-dot {
+      0%, 20%  { opacity: 0; }
+      32%      { opacity: 0.8; }
+      70%      { opacity: 0.8; }
+      85%      { opacity: 0; }
+      100%     { opacity: 0; }
+    }
+    .gdot { animation: growth-dot 9s ease-in-out infinite; }
+    .gdot-2 { animation-delay: 0.4s; }
+    .gdot-3 { animation-delay: 0.8s; }
+
+    @keyframes growth-area {
+      0%, 22% { opacity: 0; }
+      40%     { opacity: 0.05; }
+      70%     { opacity: 0.05; }
+      85%     { opacity: 0; }
+      100%    { opacity: 0; }
+    }
+    .growth-area { animation: growth-area 9s ease-in-out infinite; }
+
+    /* ═══ Morph Animation (04) ═══ */
+    @keyframes morph-out {
+      0%, 38%   { opacity: 1; }
+      48%, 88%  { opacity: 0; }
+      98%, 100% { opacity: 1; }
+    }
+    @keyframes morph-in {
+      0%, 38%   { opacity: 0; }
+      48%, 88%  { opacity: 1; }
+      98%, 100% { opacity: 0; }
+    }
+    @keyframes morph-scale {
+      0%, 38%   { transform: scale(1); }
+      48%       { transform: scale(1.06); }
+      88%       { transform: scale(1); }
+      98%, 100% { transform: scale(1); }
+    }
+    .morph-old { animation: morph-out 10s ease-in-out infinite; }
+    .morph-new { animation: morph-in 10s ease-in-out infinite; }
+    .morph-scale { animation: morph-scale 10s ease-in-out infinite; transform-origin: 200px 200px; }
+
+    @keyframes spark {
+      0%, 40%  { opacity: 0; }
+      46%      { opacity: 0.7; }
+      55%      { opacity: 0; }
+      100%     { opacity: 0; }
+    }
+    .spark { animation: spark 10s ease-in-out infinite; }
+  </style>
+</head>
+
+<body class="bg-creal-paper text-creal-ink antialiased" itemscope itemtype="https://schema.org/WebPage">
+
+  <!-- ════════ NAV ════════ -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-40 bg-creal-paper/70 backdrop-blur-2xl transition-all duration-500">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      <a href="#" aria-label="CREAL home">
+        <svg viewBox="0 0 1000 240.71" fill="#1A1816" class="h-5 md:h-6 w-auto">
+          <path d="M235.27,158.72c-14.12,47.99-59.29,82.19-113.55,82.19C50.82,240.91,0,184.76,0,120.14S48,0,121.4,0c66.82.31,104.77,49.56,113.87,83.44h-49.25c-7.22-16-27.92-42.03-64.93-42.35-45.17,0-74.34,37.96-74.34,79.05s30.43,79.67,74.66,79.67c41.41,0,60.23-32.62,64.62-41.09h49.25Z"/>
+          <path d="M269.45,4.39h70.26c36.07,0,56.78,5.65,69.33,14.74,19.13,13.8,29.49,37.33,29.49,63.05,0,16.94-4.71,32-12.55,43.29-10.04,14.74-23.21,21.33-38.27,25.09l51.76,85.95h-48.93l-62.43-107.91h9.1c15.37,0,31.99-.94,41.72-8.47,9.1-7.53,14.74-19.76,14.74-33.88s-6.9-26.98-17.25-33.57c-8.47-5.33-19.76-7.21-32.94-7.21h-27.29v169.92c0,11.66-9.45,21.11-21.11,21.11h-25.63V4.39Z"/>
+          <path d="M470.51,4.39h130.18v41.09h-83.44v52.7h81.87v41.09h-81.87v56.15h62.22c11.72,0,21.22,9.5,21.22,21.22v19.87h-130.18V4.39Z"/>
+          <path d="M672.21,236.52h-50.82L715.49,4.39h41.09l91.91,232.13h-51.13l-16.94-45.48h-91.6l-16.62,45.48ZM734,59.6l-32.94,94.11h66.82l-33.88-94.11Z"/>
+          <path d="M877.03,4.39h46.74v191.03h55.07c11.68,0,21.15,9.47,21.15,21.15v19.94h-122.97V4.39Z"/>
+        </svg>
+      </a>
+      <a href="#contact" class="btn-creal bg-creal-ink text-creal-paper font-bold px-6 py-2.5 rounded-xl text-sm tracking-tight">
+        Let's Talk
+      </a>
+    </div>
+  </nav>
+
+  <!-- ════════ HERO ════════ -->
+  <header class="min-h-[100dvh] relative overflow-hidden bg-creal-paper" role="banner">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-16 items-center min-h-[calc(100dvh-5rem)] pt-24 pb-16 relative">
+      <div>
+        <div class="flex items-center gap-2.5 mb-10" data-reveal>
+          <span class="w-2 h-2 rounded-full bg-creal-yellow pulse-dot"></span>
+          <span class="text-sm font-medium text-creal-ink-mid tracking-widest uppercase"><span class="font-bold">AI</span> + Marketing</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-[3.25rem] xl:text-[4.25rem] font-bold text-creal-ink tracking-[-0.03em] lh-display mb-8" data-reveal data-delay="1">
+          The Best Marketer<br>in the Room<br><span class="text-creal-yellow">Isn't a Person.</span>
+        </h1>
+        <p class="text-lg text-creal-ink-mid leading-relaxed max-w-[48ch] mb-12" data-reveal data-delay="2">
+          We put <strong class="font-bold">AI</strong> at the center of your marketing so your team moves faster and never has to guess.
+        </p>
+        <a href="#contact" class="btn-creal inline-flex items-center gap-3 bg-creal-ink text-creal-paper font-bold px-8 py-4 rounded-xl text-base" data-reveal data-delay="3">
+          See how we work
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Hero visual: CREAL symbol + floating accents -->
+      <div class="hidden lg:flex items-center justify-center relative">
+        <div class="absolute w-[380px] h-[380px] rounded-full glow-breathe" style="background: radial-gradient(circle, rgba(255,204,78,0.18) 0%, transparent 65%); filter: blur(40px);"></div>
+
+        <!-- Floating accent particles -->
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 500 500" fill="none">
+          <circle cx="75" cy="110" r="3" fill="#FFCC4E" opacity="0.25">
+            <animate attributeName="cy" values="110;95;110" dur="7s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="430" cy="370" r="2.5" fill="#1A1816" opacity="0.08">
+            <animate attributeName="cy" values="370;385;370" dur="9s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="390" cy="80" r="2" fill="#FFCC4E" opacity="0.2">
+            <animate attributeName="cy" values="80;68;80" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="55" cy="340" r="2" fill="#1A1816" opacity="0.06">
+            <animate attributeName="cy" values="340;355;340" dur="8s" repeatCount="indefinite"/>
+          </circle>
+          <line x1="55" y1="220" x2="75" y2="215" stroke="#1A1816" stroke-width="1.5" stroke-linecap="round" opacity="0.07">
+            <animate attributeName="y1" values="220;208;220" dur="8s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="215;203;215" dur="8s" repeatCount="indefinite"/>
+          </line>
+          <line x1="435" y1="200" x2="450" y2="205" stroke="#FFCC4E" stroke-width="1.5" stroke-linecap="round" opacity="0.15">
+            <animate attributeName="y1" values="200;212;200" dur="10s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="205;217;205" dur="10s" repeatCount="indefinite"/>
+          </line>
+        </svg>
+
+        <div class="animate-float relative">
+          <svg viewBox="0 0 500 500" class="w-[340px] h-[340px] xl:w-[400px] xl:h-[400px] drop-shadow-[0_20px_60px_rgba(255,204,78,0.12)]">
+            <path fill="#FFCC4E" d="M250,0C111.93,0,0,111.93,0,250s111.93,250,250,250,250-111.93,250-250S388.07,0,250,0ZM395.72,353.05c-34.62,84.02-151.29,97.56-226.55,55.31C17.63,323.3,54.6,70.69,248.84,68.4c48.2-.57,117.67,18.42,144.71,58.93,24.08,36.08,10.77,81.42-40.97,75.13-59.72-7.26-70.48-133.82-148.13-90.94-97.29,53.72,9.47,322.8,145.13,218.06,8.81-6.8,29.91-34.33,34.18-35.95,36.13-13.69,17.49,45.97,11.95,59.43Z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ════════ MANIFESTO ════════ -->
+  <section class="bg-creal-charcoal py-28 md:py-40 relative" aria-label="Our approach">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div class="max-w-[820px]">
+        <div class="bar-extend h-[3px] bg-creal-yellow rounded-full mb-14" data-reveal></div>
+        <h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-[3.75rem] font-bold text-white tracking-[-0.03em] lh-display mb-8" data-reveal>
+          We start with<br class="hidden md:block"> your workflow, not ours.
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-white/45 leading-relaxed max-w-[55ch]" data-reveal data-delay="1">
+          Change is hard. That's why we don't force new tools on you. We learn how your team works first, then find where <span class="font-bold">AI</span> fits naturally into what you're already doing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SERVICES ════════ -->
+  <section id="services" class="bg-creal-paper py-24 md:py-36">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+
+      <div class="mb-16 md:mb-20" data-reveal>
+        <span class="text-sm font-medium text-creal-ink-light tracking-widest uppercase">What we do</span>
+      </div>
+
+      <!-- ───── 01: Constellation ───── -->
+      <div class="service-item border-t border-creal-ink/[0.08] py-12 md:py-20" data-reveal>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-center">
+          <!-- Animation -->
+          <div class="flex items-center justify-center order-1">
+            <svg viewBox="0 0 400 400" fill="none" class="w-full max-w-[280px] lg:max-w-[360px]">
+              <!-- Connections -->
+              <g stroke="#1A1816" stroke-width="1" opacity="0.08">
+                <line x1="100" y1="80" x2="200" y2="140"/>
+                <line x1="200" y1="140" x2="310" y2="95"/>
+                <line x1="200" y1="140" x2="170" y2="260"/>
+                <line x1="170" y1="260" x2="290" y2="290"/>
+                <line x1="310" y1="95" x2="330" y2="220"/>
+                <line x1="330" y1="220" x2="290" y2="290"/>
+                <line x1="100" y1="80" x2="70" y2="200"/>
+                <line x1="70" y1="200" x2="170" y2="260"/>
+                <line x1="70" y1="200" x2="90" y2="320"/>
+                <line x1="90" y1="320" x2="170" y2="260"/>
+                <line x1="290" y1="290" x2="350" y2="345"/>
+                <line x1="200" y1="140" x2="330" y2="220"/>
+              </g>
+
+              <!-- Signal traveling path -->
+              <path id="sig1" d="M100,80 200,140 310,95 330,220 290,290 170,260 70,200 100,80" fill="none"/>
+              <circle r="4" fill="#FFCC4E" opacity="0.8">
+                <animateMotion dur="10s" repeatCount="indefinite"><mpath href="#sig1"/></animateMotion>
+              </circle>
+              <path id="sig2" d="M290,290 170,260 90,320 70,200 200,140 330,220 290,290" fill="none"/>
+              <circle r="3" fill="#FFCC4E" opacity="0.4">
+                <animateMotion dur="12s" repeatCount="indefinite" begin="3s"><mpath href="#sig2"/></animateMotion>
+              </circle>
+
+              <!-- Pulse ring from hub node -->
+              <circle cx="200" cy="140" fill="none" stroke="#FFCC4E" stroke-width="1">
+                <animate attributeName="r" from="6" to="70" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.25" to="0" dur="4s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="200" cy="140" fill="none" stroke="#FFCC4E" stroke-width="0.5">
+                <animate attributeName="r" from="6" to="70" dur="4s" begin="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.15" to="0" dur="4s" begin="2s" repeatCount="indefinite"/>
+              </circle>
+
+              <!-- Nodes -->
+              <circle cx="100" cy="80" r="3.5" fill="#1A1816" opacity="0.15">
+                <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="200" cy="140" r="6" fill="#FFCC4E" opacity="0.6">
+                <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="310" cy="95" r="4" fill="#1A1816" opacity="0.15">
+                <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="330" cy="220" r="3.5" fill="#1A1816" opacity="0.12">
+                <animate attributeName="opacity" values="0.12;0.3;0.12" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="290" cy="290" r="5" fill="#FFCC4E" opacity="0.4">
+                <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" begin="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="170" cy="260" r="4" fill="#1A1816" opacity="0.15">
+                <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" begin="0.8s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="70" cy="200" r="3.5" fill="#1A1816" opacity="0.12">
+                <animate attributeName="opacity" values="0.12;0.3;0.12" dur="4s" begin="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="90" cy="320" r="3" fill="#1A1816" opacity="0.1">
+                <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" begin="3s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="350" cy="345" r="3" fill="#1A1816" opacity="0.1">
+                <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" begin="1.8s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+          <!-- Text -->
+          <div class="order-2">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-[2px] bg-creal-yellow rounded-full"></span>
+              <span class="text-sm font-medium text-creal-yellow tracking-widest">01</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-[2.5rem] font-bold text-creal-ink tracking-[-0.02em] lh-heading mb-6">
+              <span class="font-bold">AI</span> is reshaping marketing.<br>Every part of it.
+            </h3>
+            <p class="text-base text-creal-ink-mid leading-relaxed max-w-[50ch]">
+              <span class="font-bold">AI</span> is already writing copy and generating creative that connects. We help you put it to work before your competitors do.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───── 02: Orbital System ───── -->
+      <div class="service-item border-t border-creal-ink/[0.08] py-12 md:py-20" data-reveal>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-center">
+          <!-- Text (left on desktop) -->
+          <div class="order-2 lg:order-1">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-[2px] bg-creal-yellow rounded-full"></span>
+              <span class="text-sm font-medium text-creal-yellow tracking-widest">02</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-[2.5rem] font-bold text-creal-ink tracking-[-0.02em] lh-heading mb-6">
+              Automation is just<br>the beginning.
+            </h3>
+            <p class="text-base text-creal-ink-mid leading-relaxed max-w-[50ch]">
+              <span class="font-bold">AI</span> agents can now handle tasks that used to need a person. But before you automate, you need to know what's worth automating. We help you figure that out.
+            </p>
+          </div>
+          <!-- Animation (right on desktop) -->
+          <div class="flex items-center justify-center order-1 lg:order-2">
+            <svg viewBox="0 0 400 400" fill="none" class="w-full max-w-[280px] lg:max-w-[360px]">
+              <!-- Orbit paths -->
+              <circle cx="200" cy="200" r="55" stroke="#1A1816" stroke-width="1" opacity="0.06" stroke-dasharray="4 6"/>
+              <circle cx="200" cy="200" r="105" stroke="#1A1816" stroke-width="1" opacity="0.06" stroke-dasharray="4 6"/>
+              <circle cx="200" cy="200" r="155" stroke="#1A1816" stroke-width="1" opacity="0.06" stroke-dasharray="4 6"/>
+
+              <!-- Center -->
+              <circle cx="200" cy="200" r="8" fill="#FFCC4E" opacity="0.6">
+                <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="200" cy="200" r="3" fill="#FFCC4E" opacity="0.9"/>
+
+              <!-- Inner orbit -->
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="7s" repeatCount="indefinite"/>
+                <circle cx="255" cy="200" r="5" fill="#1A1816" opacity="0.25"/>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="180 200 200" to="540 200 200" dur="7s" repeatCount="indefinite"/>
+                <circle cx="255" cy="200" r="3" fill="#1A1816" opacity="0.12"/>
+              </g>
+
+              <!-- Mid orbit -->
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="13s" repeatCount="indefinite"/>
+                <circle cx="305" cy="200" r="6" fill="#FFCC4E" opacity="0.5"/>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="120 200 200" to="480 200 200" dur="13s" repeatCount="indefinite"/>
+                <circle cx="305" cy="200" r="3.5" fill="#1A1816" opacity="0.15"/>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="240 200 200" to="600 200 200" dur="13s" repeatCount="indefinite"/>
+                <circle cx="305" cy="200" r="3" fill="#1A1816" opacity="0.1"/>
+              </g>
+
+              <!-- Outer orbit -->
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="-360 200 200" dur="20s" repeatCount="indefinite"/>
+                <circle cx="355" cy="200" r="4.5" fill="#1A1816" opacity="0.18"/>
+              </g>
+              <g>
+                <animateTransform attributeName="transform" type="rotate" from="150 200 200" to="-210 200 200" dur="20s" repeatCount="indefinite"/>
+                <circle cx="355" cy="200" r="3.5" fill="#FFCC4E" opacity="0.3"/>
+              </g>
+
+              <!-- Connecting flare between center and mid orbit -->
+              <circle cx="200" cy="200" fill="none" stroke="#FFCC4E" stroke-width="0.5">
+                <animate attributeName="r" from="8" to="105" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.12" to="0" dur="5s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───── 03: Growth Chart ───── -->
+      <div class="service-item border-t border-creal-ink/[0.08] py-12 md:py-20" data-reveal>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-center">
+          <!-- Animation -->
+          <div class="flex items-center justify-center order-1">
+            <svg viewBox="0 0 400 320" fill="none" class="w-full max-w-[280px] lg:max-w-[360px]">
+              <!-- Grid -->
+              <g stroke="#1A1816" stroke-width="1" opacity="0.04">
+                <line x1="40" y1="280" x2="370" y2="280"/>
+                <line x1="40" y1="220" x2="370" y2="220"/>
+                <line x1="40" y1="160" x2="370" y2="160"/>
+                <line x1="40" y1="100" x2="370" y2="100"/>
+                <line x1="40" y1="40" x2="370" y2="40"/>
+              </g>
+              <!-- Axis -->
+              <line x1="40" y1="280" x2="40" y2="30" stroke="#1A1816" stroke-width="1" opacity="0.08"/>
+              <line x1="40" y1="280" x2="375" y2="280" stroke="#1A1816" stroke-width="1" opacity="0.08"/>
+
+              <!-- Area fill -->
+              <path d="M 45 272 C 85 268, 110 262, 145 238 S 210 175, 250 138 S 310 65, 365 32 L 365 280 L 45 280 Z"
+                    fill="#FFCC4E" class="growth-area"/>
+
+              <!-- Growth line -->
+              <path d="M 45 272 C 85 268, 110 262, 145 238 S 210 175, 250 138 S 310 65, 365 32"
+                    stroke="#FFCC4E" stroke-width="2.5" stroke-linecap="round" class="growth-line"/>
+
+              <!-- Data points -->
+              <circle cx="145" cy="238" r="5" fill="#FFCC4E" class="gdot">
+                <animate attributeName="r" values="5;6;5" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="250" cy="138" r="5" fill="#FFCC4E" class="gdot gdot-2">
+                <animate attributeName="r" values="5;6;5" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="365" cy="32" r="6" fill="#FFCC4E" class="gdot gdot-3">
+                <animate attributeName="r" values="6;7.5;6" dur="2s" begin="1.4s" repeatCount="indefinite"/>
+              </circle>
+
+              <!-- Labels -->
+              <text x="145" y="260" text-anchor="middle" fill="#A39D96" font-size="10" font-family="Satoshi" class="gdot">Traction</text>
+              <text x="250" y="158" text-anchor="middle" fill="#A39D96" font-size="10" font-family="Satoshi" class="gdot gdot-2">Growth</text>
+              <text x="352" y="24" text-anchor="end" fill="#FFCC4E" font-size="11" font-weight="600" font-family="Satoshi" class="gdot gdot-3">Seed</text>
+            </svg>
+          </div>
+          <!-- Text -->
+          <div class="order-2">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-[2px] bg-creal-yellow rounded-full"></span>
+              <span class="text-sm font-medium text-creal-yellow tracking-widest">03</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-[2.5rem] font-bold text-creal-ink tracking-[-0.02em] lh-heading mb-6">
+              GTM strategy for<br>pre-seed startups.
+            </h3>
+            <p class="text-base text-creal-ink-mid leading-relaxed max-w-[50ch]">
+              We help early-stage SaaS teams build go-to-market plans that get you from pre-seed to seed. No fluff, just what works to get traction.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───── 04: Metamorphosis ───── -->
+      <div class="service-item border-t border-creal-ink/[0.08] border-b py-12 md:py-20" data-reveal>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 lg:gap-16 items-center">
+          <!-- Text (left on desktop) -->
+          <div class="order-2 lg:order-1">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-8 h-[2px] bg-creal-yellow rounded-full"></span>
+              <span class="text-sm font-medium text-creal-yellow tracking-widest">04</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-[2.5rem] font-bold text-creal-ink tracking-[-0.02em] lh-heading mb-6">
+              Not a tech company?<br><span class="font-bold">AI</span> still works for you.
+            </h3>
+            <p class="text-base text-creal-ink-mid leading-relaxed max-w-[50ch]">
+              You don't need to be a tech company to benefit from <span class="font-bold">AI</span>. We help traditional businesses find real, practical ways to use <span class="font-bold">AI</span> in their day-to-day marketing.
+            </p>
+          </div>
+          <!-- Animation (right on desktop) -->
+          <div class="flex items-center justify-center order-1 lg:order-2">
+            <svg viewBox="0 0 400 400" fill="none" class="w-full max-w-[280px] lg:max-w-[360px]">
+              <g class="morph-scale">
+                <!-- Old: Angular hexagon -->
+                <g class="morph-old">
+                  <polygon points="200,55 325,125 325,275 200,345 75,275 75,125"
+                           stroke="#1A1816" stroke-width="1.5" opacity="0.15"/>
+                  <polygon points="200,100 280,145 280,255 200,300 120,255 120,145"
+                           stroke="#1A1816" stroke-width="1" opacity="0.08"/>
+                  <polygon points="200,145 240,168 240,232 200,255 160,232 160,168"
+                           stroke="#1A1816" stroke-width="0.8" opacity="0.05"/>
+                  <!-- Corner markers -->
+                  <circle cx="200" cy="55" r="3" fill="#1A1816" opacity="0.12"/>
+                  <circle cx="325" cy="125" r="3" fill="#1A1816" opacity="0.12"/>
+                  <circle cx="325" cy="275" r="3" fill="#1A1816" opacity="0.12"/>
+                  <circle cx="200" cy="345" r="3" fill="#1A1816" opacity="0.12"/>
+                  <circle cx="75" cy="275" r="3" fill="#1A1816" opacity="0.12"/>
+                  <circle cx="75" cy="125" r="3" fill="#1A1816" opacity="0.12"/>
+                </g>
+
+                <!-- New: Smooth circles -->
+                <g class="morph-new">
+                  <circle cx="200" cy="200" r="145" stroke="#FFCC4E" stroke-width="2" opacity="0.5"/>
+                  <circle cx="200" cy="200" r="100" stroke="#FFCC4E" stroke-width="1.5" opacity="0.3"/>
+                  <circle cx="200" cy="200" r="55" stroke="#FFCC4E" stroke-width="1" opacity="0.2"/>
+                </g>
+              </g>
+
+              <!-- Transition sparks -->
+              <circle cx="145" cy="100" r="2.5" fill="#FFCC4E" class="spark"/>
+              <circle cx="280" cy="120" r="2" fill="#FFCC4E" class="spark" style="animation-delay: 0.15s"/>
+              <circle cx="310" cy="230" r="2.5" fill="#FFCC4E" class="spark" style="animation-delay: 0.3s"/>
+              <circle cx="230" cy="320" r="2" fill="#FFCC4E" class="spark" style="animation-delay: 0.1s"/>
+              <circle cx="100" cy="290" r="2" fill="#FFCC4E" class="spark" style="animation-delay: 0.25s"/>
+              <circle cx="95" cy="160" r="2.5" fill="#FFCC4E" class="spark" style="animation-delay: 0.2s"/>
+
+              <!-- Center glow during transition -->
+              <circle cx="200" cy="200" r="12" fill="#FFCC4E" class="morph-new" opacity="0">
+                <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ════════ CONTACT ════════ -->
+  <section id="contact" class="bg-creal-paper-alt py-24 md:py-36 relative" aria-label="Contact">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24">
+        <div data-reveal>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-creal-ink tracking-[-0.03em] lh-display mb-6">
+            Let's talk.
+          </h2>
+          <p class="text-lg text-creal-ink-mid leading-relaxed mb-14 max-w-[38ch]">
+            Tell us about your business.<br>We'll show you where <span class="font-bold">AI</span> fits.
+          </p>
+          <a href="mailto:hello@crealwork.com" class="text-creal-ink font-medium text-lg underline underline-offset-4 decoration-creal-yellow decoration-2 hover:decoration-creal-ink transition-all duration-300">
+            hello@crealwork.com
+          </a>
+        </div>
+        <form id="contact-form" action="#" method="POST" class="space-y-5" data-reveal data-delay="1">
+          <div>
+            <label for="name" class="block text-sm text-creal-ink-mid mb-2 font-medium">Name</label>
+            <input type="text" id="name" name="name" required class="input-paper w-full bg-creal-paper border border-creal-ink/[0.12] rounded-xl px-5 py-4 text-creal-ink placeholder-creal-ink-light outline-none" placeholder="Your name">
+          </div>
+          <div>
+            <label for="company" class="block text-sm text-creal-ink-mid mb-2 font-medium">Company</label>
+            <input type="text" id="company" name="company" class="input-paper w-full bg-creal-paper border border-creal-ink/[0.12] rounded-xl px-5 py-4 text-creal-ink placeholder-creal-ink-light outline-none" placeholder="Company name">
+          </div>
+          <div>
+            <label for="email" class="block text-sm text-creal-ink-mid mb-2 font-medium">Email</label>
+            <input type="email" id="email" name="email" required class="input-paper w-full bg-creal-paper border border-creal-ink/[0.12] rounded-xl px-5 py-4 text-creal-ink placeholder-creal-ink-light outline-none" placeholder="you@company.com">
+          </div>
+          <div>
+            <label for="message" class="block text-sm text-creal-ink-mid mb-2 font-medium">Message</label>
+            <textarea id="message" name="message" rows="4" class="input-paper w-full bg-creal-paper border border-creal-ink/[0.12] rounded-xl px-5 py-4 text-creal-ink placeholder-creal-ink-light outline-none resize-none" placeholder="Tell us about your business..."></textarea>
+          </div>
+          <div class="pt-2">
+            <button type="submit" class="btn-creal bg-creal-ink text-creal-paper font-bold px-8 py-4 rounded-xl text-base w-full md:w-auto">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="bg-creal-charcoal py-10">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+      <svg viewBox="0 0 1000 240.71" fill="rgba(255,255,255,0.2)" class="h-4 w-auto">
+        <path d="M235.27,158.72c-14.12,47.99-59.29,82.19-113.55,82.19C50.82,240.91,0,184.76,0,120.14S48,0,121.4,0c66.82.31,104.77,49.56,113.87,83.44h-49.25c-7.22-16-27.92-42.03-64.93-42.35-45.17,0-74.34,37.96-74.34,79.05s30.43,79.67,74.66,79.67c41.41,0,60.23-32.62,64.62-41.09h49.25Z"/>
+        <path d="M269.45,4.39h70.26c36.07,0,56.78,5.65,69.33,14.74,19.13,13.8,29.49,37.33,29.49,63.05,0,16.94-4.71,32-12.55,43.29-10.04,14.74-23.21,21.33-38.27,25.09l51.76,85.95h-48.93l-62.43-107.91h9.1c15.37,0,31.99-.94,41.72-8.47,9.1-7.53,14.74-19.76,14.74-33.88s-6.9-26.98-17.25-33.57c-8.47-5.33-19.76-7.21-32.94-7.21h-27.29v169.92c0,11.66-9.45,21.11-21.11,21.11h-25.63V4.39Z"/>
+        <path d="M470.51,4.39h130.18v41.09h-83.44v52.7h81.87v41.09h-81.87v56.15h62.22c11.72,0,21.22,9.5,21.22,21.22v19.87h-130.18V4.39Z"/>
+        <path d="M672.21,236.52h-50.82L715.49,4.39h41.09l91.91,232.13h-51.13l-16.94-45.48h-91.6l-16.62,45.48ZM734,59.6l-32.94,94.11h66.82l-33.88-94.11Z"/>
+        <path d="M877.03,4.39h46.74v191.03h55.07c11.68,0,21.15,9.47,21.15,21.15v19.94h-122.97V4.39Z"/>
+      </svg>
+      <span class="text-sm text-white/25">&copy; 2026 CREAL Marketing Inc.</span>
+    </div>
+  </footer>
+
+  <!-- ════════ SCRIPTS ════════ -->
+  <script>
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('revealed');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+    const nav = document.getElementById('nav');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sent!';
+      btn.classList.add('opacity-60', 'pointer-events-none');
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('opacity-60', 'pointer-events-none');
+        e.target.reset();
+      }, 2500);
+    });
+  </script>
+
+</body>
+</html>

@@ -313,7 +313,7 @@
         <p class="text-lg text-creal-ink-mid leading-relaxed max-w-[48ch] mb-12" data-reveal data-delay="2">
           We put AI at the center of your marketing so your team moves faster and never has to guess.
         </p>
-        <a href="#contact" class="btn-creal inline-flex items-center gap-3 bg-creal-ink text-creal-paper font-bold px-8 py-4 rounded-xl text-base" data-reveal data-delay="3">
+        <a href="#contact" onclick="typeof gtag==='function'&&gtag('event','cta_click',{event_category:'CTA',event_label:'hero_see_how_we_work'})" class="btn-creal inline-flex items-center gap-3 bg-creal-ink text-creal-paper font-bold px-8 py-4 rounded-xl text-base" data-reveal data-delay="3">
           See how we work
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
         </a>
@@ -814,6 +814,18 @@
         });
         btn.textContent = 'Sent!';
         e.target.reset();
+        // GA4 conversion event
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'Contact',
+            event_label: payload.company || payload.name,
+            value: 1
+          });
+        }
+        // Meta Pixel conversion event
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        }
       } catch {
         btn.textContent = 'Error. Try again.';
       }
